@@ -1,13 +1,21 @@
 'use client'
 
 import React, {useCallback, useState} from 'react';
-import {addEdge, applyEdgeChanges, applyNodeChanges, Background, Controls, MiniMap, ReactFlow} from '@xyflow/react';
+import {
+    addEdge,
+    applyEdgeChanges,
+    applyNodeChanges,
+    Background,
+    BackgroundVariant,
+    Controls,
+    MiniMap,
+    ReactFlow
+} from '@xyflow/react';
 
 
 import '@xyflow/react/dist/style.css';
 import Edge from "@/app/family/ui/edge";
 import FamilyNode from "@/app/family/ui/family-node";
-import '@xyflow/react/dist/style.css';
 
 const initialNodes = [
     FamilyNode('alpha', 500, 50),
@@ -45,7 +53,7 @@ export default function Home() {
     );
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <main className={"flex min-h-screen flex-col items-center justify-between p-24"}>
             <div style={{width: '100vw', height: '100vh'}}>
                 <ReactFlow
                     nodes={nodes}
@@ -56,7 +64,7 @@ export default function Home() {
                 >
                     <Controls/>
                     <MiniMap/>
-                    <Background variant="dots" gap={12} size={2}/>
+                    <Background variant={BackgroundVariant.Dots} gap={12} size={2}/>
                 </ReactFlow>
             </div>
         </main>
