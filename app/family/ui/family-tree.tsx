@@ -38,7 +38,9 @@ export default function FamilyTree(props) {
     );
 
     const addNodeCallback = () => {
+        // @ts-ignore: Object is possibly 'null'.
         const name = document.getElementById("name-tf").value
+        // @ts-ignore: Object is possibly 'null'.
         const fullname = document.getElementById("fullname-tf").value
         setNodes(prevNodes => {
 
